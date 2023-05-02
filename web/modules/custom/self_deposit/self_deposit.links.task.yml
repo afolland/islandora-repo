@@ -1,0 +1,5 @@
+entity.webform_submission.resend_form:
+  title: 'Create'
+  route_name: entity.webform_submission.create
+  base_route: entity.webform_submission.canonical
+  weight: 40

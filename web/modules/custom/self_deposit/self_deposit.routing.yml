@@ -50,3 +50,12 @@ self_deposit.perf_archive.add_child:
         type: entity:node_type
       parent:
         type: entity:node
+
+entity.webform_submission.create:
+  path: '/admin/structure/webform/manage/{webform}/submission/{webform_submission}/create'
+  defaults:
+    _form: 'Drupal\webform\Form\WebformSubmissionResendForm'
+    _title_callback: '\Drupal\webform\Controller\WebformSubmissionViewController::title'
+  requirements:
+    _entity_access: 'webform_submission.resend'
+    _custom_access: '\Drupal\webform\Access\WebformSubmissionAccess::checkResendAccess'
