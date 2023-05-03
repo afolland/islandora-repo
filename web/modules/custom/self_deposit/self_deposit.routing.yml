@@ -52,7 +52,7 @@ self_deposit.perf_archive.add_child:
         type: entity:node
 
 self_deposit.create:
-  path: '/admin/structure/webform/manage/self_deposit/submission/{webform_submission}/create'
+  path: '/admin/structure/webform/manage/{webform}/submission/{webform_submission}/create'
   defaults:
     _form: 'Drupal\webform\Form\WebformSubmissionResendForm'
     _title_callback: '\Drupal\webform\Controller\WebformSubmissionViewController::title'
