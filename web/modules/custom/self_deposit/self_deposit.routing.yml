@@ -55,7 +55,7 @@ self_deposit.create:
   path: '/admin/structure/webform/manage/self_deposit/submission/{webform_submission}/create'
   defaults:
     _form: 'Drupal\webform\Form\WebformSubmissionResendForm'
-    _title_callback: 'Create Item'
+    _title_callback: '\Drupal\webform\Controller\WebformSubmissionViewController::title'
   requirements:
     _entity_access: 'webform_submission.resend'
     _custom_access: '\Drupal\webform\Access\WebformSubmissionAccess::checkResendAccess'
