@@ -1,5 +1,5 @@
-entity.webform_submission.resend_form:
+self_deposit.create:
   title: 'Create'
-  route_name: entity.webform_submission.create
+  route_name: self_deposit.create
   base_route: entity.webform_submission.canonical
-  weight: 40
+  weight: 100
