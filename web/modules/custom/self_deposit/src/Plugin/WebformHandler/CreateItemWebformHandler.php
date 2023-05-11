@@ -18,7 +18,7 @@ use Drupal\asu_deposit_methods\DepositUtils;
  * Create a new repository item entity from a webform submission.
  *
  * @WebformHandler(
- *   id = "Create a repository item",
+ *   id = "create_item",
  *   label = @Translation("Create a repository item"),
  *   category = @Translation("Entity Creation"),
  *   description = @Translation("Creates a new repository item from Webform Submissions."),

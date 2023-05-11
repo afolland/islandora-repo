@@ -15,8 +15,12 @@ class SelfDepositViewController extends WebformSubmissionViewController {
    */
   public function view(EntityInterface $webform_submission, $view_mode = 'default', $langcode = NULL) {
     $webform = $this->requestHandler->getCurrentWebform();
-    \Drupal::logger('self_deposit')->notice('Webform title: '.$webform->label());
+    #\Drupal::logger('self_deposit')->notice('Webform title: '.$webform->label());
 
-    return parent::view($webform_submission, $view_mode, $langcode);
+
+    #$build = parent::view($webform_submission, $view_mode, $langcode);
+    $build = \Drupal::formBuilder()->getForm('Drupal\self_deposit\Form\SelfDepositCreateForm', $webform_submission);
+    return $build;
+    #return 
   }
 }
